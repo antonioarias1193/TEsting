@@ -1,0 +1,100 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+  }
+
+/* =============== Navbar Head ============================ */
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-fluid{
+    transition: 0.2s;
+ }
+
+.gambar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: width 0.3s, height 0.3s;
+  }
+
+  .gambar.sizingonscroll {
+    transition: transform 0.3s;
+    width: 100px;
+    height: 100px;
+   
+  }
+
+  .gambar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* =============== Navbar Head ============================ */
+  
+  /* =============== Introduction ============================ */
+  .deskripsi {
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+    padding-left: 5vh;
+    padding-right: 5vh;
+    max-width: 60vh;
+  }
+  
+  .deskripsi p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .imagedesc{
+    width: 200px;
+    height: 170px;
+
+    transition: transform 0.3s ease-in-out, circle-shadow 0.3s ease-in-out;
+  }
+
+  .imagedesc:hover{
+    transform: scale(1.1);
+
+  }
+
+  .img-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  @media (max-width: 668px) {
+    .img-description{
+      flex-direction: column-reverse;
+    }
+  }
+/* =============== Introduction ============================ */
+
+/* =============== Cards Some Projects ============================ */
+.projects .card {
+  transition: all 0.2s;
+  margin-top: 50px;
+  margin-inline: 10px;
+}
+
+.projects .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* =============== Cards Some Projects ============================ */
+  

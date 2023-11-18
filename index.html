@@ -1,112 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication is Fun</title>
-    <style>
-        body {text-align: center; background-color: lightseagreen; color: black;}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Anton</title>
+  <!-- CSS References -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/deviceBattery.css">
+  <!-- CSS References -->
+  <!-- Bootstraps -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstraps -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
 </head>
+
 <body>
-    <div id="authForm">
-        <h2>Sign Up or Sign In</h2>
-        <input type="email" placeholder="email" id="userEmail">
-        <input type="password" placeholder="password" id="userPassword">  <br><br>
-        <button id="signUpButton">Sign Up</button>
-        <button id="signInButton">Sign In</button>
+  <!-- ================================================ Navbar Head ================================================ -->
+  <nav class="navbar navbar-dark navbar-expand-lg bg-transparent fixed-top" id="sticky-edit"
+    style="background-image: url('images/back.jpeg');">
+    <!-- ================================================ Battery Devices ================================================ -->
+    <div class="battery_onscroll">
+      <section class="battery">
+        <div class="battery_container">
+          <div class="Bcard">
+            <div class="Bpill_onscroll Bpill">
+              <div class="Blevel">
+                <div class="Bliquid">
+
+                </div>
+              </div>
+            </div>
+            <div class="Bdata">
+              <h1 class="Bpercentage_onscroll Bpercentage">20%</h1>
+              <!-- Status Charging or not or low -->
+              <p class="Bstatus_onscroll Bstatus">
+                <i class="Bstatus_icons ri-plug-line"></i>
+              </p>
+              <!-- Status Charging or not or low -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ================================================ Battery Devices ================================================ -->
+    <div class="container-fluid my-5">
+      <img class="gambar sizingonscroll" src="images/profile.jpeg" alt="My Profile">
+      <a class="navbar-brand ps-4">
+        <h2>Anton</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end ms-3 mt-4" id="navbarNav">
+        <ul class="navbar-nav pe-2">
+          <li class="nav-item pe-4">
+            <a class="nav-link active" aria-current="page" href="#Profile_Me">
+              <h4>It's Me</h4>
+            </a>
+          </li>
+          <li class="nav-item pe-4">
+            <a class="nav-link" href="#link_projectNavbar">
+              <h4>Projects</h4>
+            </a>
+          </li>
+          <li class="nav-item pe-4">
+            <a class="nav-link" href="#contacts_footer">
+              <h4>Contact</h4>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================ Navbar Head ==================================================== -->
+
+  <!-- ================================================ Content spacing ================================================ -->
+  <div class="px-4 py-5 my-5" style="min-height: 20vh;"></div>
+  <!-- ================================================ Content spacing ================================================ -->
+
+  <!-- ================================================ Introduction =================================================== -->
+  <div id="Profile_Me" class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Hi, It's me Antonio Arias called Anton</h1>
+  </div>
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">A Web Developer For Developt More Functionable sites</h1>
+  </div>
+
+
+  <div class="img-description">
+    <div class="deskripsi ">
+      <p>I am a web developer experienced in creating functional and attractive websites. With knowledge of HTML,
+        CSS,
+        Bootstrap, and JavaScript, I have the ability to develop a website that suits your needs.</p>
+      <p>I also have a project in the form of a film rating search site using the fetch api method. This interest
+        motivates me to create engaging and creative digital experiences.</p>
+    </div>
+    <img class="imagedesc" src="images/profile2.png" alt="Your Image">
+  </div>
+
+  <!-- ================================================ Introduction =================================================== -->
+
+  <!-- ================================================ Carousel Any Film References Slide ============================= -->
+  <div class="px-4 py-5 my-5 text-center bg-dark" id="link_projectNavbar">
+    <h1 class="display-5 fw-bold text-light">My Projects</h1>
+  </div>
+
+  <div class="projects d-flex justify-content-around flex-wrap">
+    <div class="card" style="width: 18rem;">
+      <a href="./projects/movieSearch/movie_search.html" class="text-decoration-none">
+        <img src="images/project_movie.png" class="card-img-top" alt="images project movie search">
+        <div class="card-body text-center text-body-secondary text-decoration-">
+          Movies Search
+        </div>
+      </a>
     </div>
 
-    <div id="secretContent">
-        <h3>This is top secret information that you can only see if</h3>
-        <h1>AUTHENTICATED</h1>
-        <button id="signOutButton">Sign Out</button>
+    <div class="card" style="width: 18rem;">
+      <a href="./projects/colorSwitch/simple_switch.html" class="text-decoration-none">
+        <img src="images/project_colorswitch.png" class="card-img-top" alt="images project colorswitch">
+        <div class="card-body text-center text-body-secondary text-decoration-">
+          Color Switch
+        </div>
+      </a>
     </div>
 
-    <script type="module">
-        //Update the below URL with the appropriate version if necessary.
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-        import {
-            getAuth,
-            createUserWithEmailAndPassword,
-            signInWithEmailAndPassword,
-            onAuthStateChanged,
-            signOut
-        //Update the below URL with the appropriate version if necessary.
-        } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-       
-      
-        // INSERT YOUR FIREBASE CONFIG OBJECT HERE
+    <div class="card" style="width: 18rem;">
+      <a href="./projects/crud/layer.html" class="text-decoration-none">
+        <img src="images/project_CRUD.png" class="card-img-top" alt="images project CRUD">
+        <div class="card-body text-center text-body-secondary text-decoration-">
+          Create, Read, Update, Delete
+        </div>
+      </a>
+    </div>
 
-      
-    
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
+  </div>
+  <!-- ================================================ Closing ======================================================== -->
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Thanks for participating</h1>
+  </div>
 
-        const userEmail = document.querySelector("#userEmail");
-        const userPassword = document.querySelector("#userPassword");
-        const authForm = document.querySelector("#authForm");
-        const secretContent = document.querySelector("#secretContent");
-        const signUpButton = document.querySelector("#signUpButton");
-        const signInButton = document.querySelector("#signInButton");
-        const signOutButton = document.querySelector("#signOutButton");
+  <div class="d-flex flex-column text-center text-white" style="background-color: #333333;" id="contacts_footer">
+    <h2 class="display-6 fw-bold text-bg-dark py-3">Contact Information</h2>
+    <p"><strong>Email:</strong> <a href="mailto:antonioarias1193@gmail.com" target="_blank"
+        class="text-light">antonioarias1193@gmail.com</a></p>
+      <p><strong>Phone:</strong> (+62) 0878-8005-8002</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/antonio-arias1193/" target="_blank"
+          class="text-light">Antonio Arias</a></p>
+  </div>
+  <!-- ================================================ Closing ======================================================== -->
 
-        secretContent.style.display = 'none';
+  <!-- Script References -->
+  <script src="js/Script.js"></script>
+  <script src="js/deviceBattery.js"></script>
+  <!-- Script References -->
 
-        const userSignUp = async() => {
-            const signUpEmail = userEmail.value;
-            const signUpPassword = userPassword.value;
-            createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
-                alert("Your account has been created!");
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode + errorMessage)
-            })
-        }
+  <!-- Bootstraps -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Bootstraps -->
 
-        const userSignIn = async() => {
-            const signInEmail = userEmail.value;
-            const signInPassword = userPassword.value;
-            signInWithEmailAndPassword(auth, signInEmail, signInPassword)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                alert("You have signed in successfully!");
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode + errorMessage)
-            })
-        }
+  <!-- Devices Battery Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-        const checkAuthState = async() => {
-            onAuthStateChanged(auth, user => {
-                if(user) {
-                    authForm.style.display = 'none';
-                    secretContent.style.display = 'block';
-                }
-                else {
-                    authForm.style.display = 'block';
-                    secretContent.style.display = 'none';
-                }
-            })
-        }
-
-        const userSignOut = async() => {
-            await signOut(auth);
-        }
-
-        checkAuthState();
-
-        signUpButton.addEventListener('click', userSignUp);
-        signInButton.addEventListener('click', userSignIn);
-        signOutButton.addEventListener('click', userSignOut);
-      </script>
 </body>
+
 </html>

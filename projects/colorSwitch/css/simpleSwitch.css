@@ -1,0 +1,107 @@
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        red,
+        blue,
+        green
+                                )
+    }
+
+    /* ========================== Header Navbar ========================== */
+    .titleNav{
+        font-size: 30px;
+        font-family: Trebuchet;
+        font-weight: 900;
+        
+        background-image: var(--gradient);
+        background-size: 400%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: nav-gradation 2s ease-in-out infinite alternate;
+        
+    }
+    
+    @keyframes nav-gradation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+    
+    }
+
+    .buttonNav_SIMPLE{
+        border: none;
+        background: none;
+        font-weight: 500;
+    }
+
+    .buttonNav_SIMPLE:focus{
+        font-weight: bolder;
+        color: blueviolet;
+    }
+
+    .buttonNav_HEX{
+        border: none;
+        background: none;
+        font-weight: 500;
+    }
+
+    .buttonNav_HEX:focus{
+        font-weight: bolder;
+        color: blue;
+    }
+
+    .buttonNav_BACK{
+        border: none;
+        background: none;
+        font-weight: 500;
+    }
+    
+        .nav-center{
+            display: flex;
+            justify-content: space-around;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 5px 20px;
+    
+        }
+    
+        .nav-links{
+            display: flex;
+            gap: 60px;
+        
+        }
+
+        /* Responsive Web */
+        @media (max-width: 568px) {
+            .nav-center{
+            flex-wrap: wrap;
+            }
+            .nav-links{
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 30px;
+                margin-right: 110px;
+                margin-left: 100px;
+            }
+        }
+    /* ========================== Header Navbar ========================== */
+
+    /* ========================== Body Color Switch ========================== */
+    #hexDefaultBtn{
+        display: none;
+    }
+
+
+    main{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .container{
+        border-radius: 14px;
+        padding: 30px;
+    }
+
+    /* ========================== Body Color Switch ========================== */

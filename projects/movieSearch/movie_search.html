@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS References -->
+    <link rel="stylesheet" href="css/movie_style.css">
+    <!-- CSS References -->
+    <!-- Bootstraps -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstraps -->
+    <!-- Fonts & Font Awesome Icon -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts & Font Awesome Icon -->
+</head>
+
+<body>
+    <!-- ================================================ Navbar Head ==================================================== -->
+    <nav class="navbar navbar-dark bg-dark px-5">
+        <div class="container-fluid d-sm-flex d-grid gap-3 text-end">
+            <div class="navbar-brand fs-2"><i class="fa-solid fa-film fa-beat"></i> Movie Search</div>
+            <div class="" id="navbarSupportedContent ">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="link-light fs-3" aria-current="page" href="../.././index.html"><i
+                                class="fa-solid fa-arrow-right-from-bracket fa-flip-both"></i> Back</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ================================================ Navbar Head ==================================================== -->
+
+    <!-- ================================================ Carousel Any Film References Slide ============================= -->
+    <div class="px-4 py-5 my-5 text-center bg-dark" id="text_moviesdesc">
+        <h1 class="display-5 fw-bold text-light">Any Film References</h1>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide bg-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div id="slide1" class="carousel-item active">
+                <h1 id="title_slide1">Title</h1>
+            </div>
+            <div id="slide2" class="carousel-item">
+                <h1 id="title_slide2">Title</h1>
+            </div>
+            <div id="slide3" class="carousel-item">
+                <h1 id="title_slide3">Title</h1>
+            </div>
+            <div id="slide4" class="carousel-item">
+                <h1 id="title_slide4">Title</h1>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- ================================================ Carousel Any Film References Slide ============================= -->
+
+    <!-- ================================================ Movie Search References ======================================== -->
+    <div class="px-4 py-5 my-5 text-center" id="pencari_movies">
+        <h1 class="display-5 fw-bold text-body-emphasis">Type Movie Search References Below</h1>
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control border-black fs-5" id="search_control"
+            placeholder="Type Movies You want know ..." aria-label="Type Movies You want know ..."
+            aria-describedby="button-addon2">
+        <button class="btn btn-outline-danger fs-5" type="button" onclick="searching_movie()"
+            id="button-search">Search</button>
+    </div>
+
+    <div class="container">
+        <div id="Smovie_container_cards"> <!-- Automate insert from searchingApi,js --> </div>
+    </div>
+    <!-- ================================================ Movie Search References ======================================== -->
+
+    <!-- ================================================ Movie Details Show up ========================================== -->
+    <div class="modal fade" id="details_movie" tabindex="-1" aria-labelledby="details_movieLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="details_movieLabel">Movie Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- This is the place for modal Details from searchingApi.js -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================================================ Movie Details Show up ========================================== -->
+
+    <!-- ================================================ Closing ======================================================== -->
+
+    <div class="d-flex flex-column text-center text-white" style="background-color: #333333;" id="contacts_footer">
+        <h2 class="display-6 fw-bold text-bg-dark py-3">Contact Information</h2>
+        <p"><strong>Email:</strong> <a href="mailto:antonioarias1193@gmail.com" target="_blank"
+                class="text-light">antonioarias1193@gmail.com</a></p>
+            <p><strong>Phone:</strong> (+62) 0878-8005-8002</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/antonio-arias1193/" target="_blank"
+                    class="text-light">Antonio Arias</a></p>
+    </div>
+    <!-- ================================================ Closing ======================================================== -->
+
+    <!-- Script References -->
+    <script src="js_API/api.js"></script>
+    <script src="js_API/searchingApi.js"></script>
+    <!-- Script References -->
+
+    <!-- Bootstraps -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Bootstraps -->
+</body>
+
+</html>
